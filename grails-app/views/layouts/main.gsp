@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="MyApp">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,6 +13,10 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
 
   		<asset:stylesheet src="application.css"/>
+
+		<script type="text/javascript">
+			var SERVER_URL = '${grailsApplication.config.grails.serverURL}';
+		</script>
 		<asset:javascript src="application.js"/>
 		<g:layoutHead/>
 	</head>
