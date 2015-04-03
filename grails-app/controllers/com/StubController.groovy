@@ -9,9 +9,14 @@ class StubController {
         // request.JSON contains post parameters
         println request.JSON
 
+        def name = request.JSON?.name
+
         sleep(1000); // process simulation
 
-        render text: [success: true, message: 'Successfully created'] as JSON
+        if(name == 'fail')
+            render text: [success: false, message: 'Error during stub creation'] as JSON
+        else
+            render text: [success: true, message: 'Successfully created'] as JSON
     }
 
     def list(){

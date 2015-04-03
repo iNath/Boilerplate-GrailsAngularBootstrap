@@ -21,6 +21,7 @@
 		<g:layoutHead/>
 	</head>
 	<body>
+		<toast></toast>
 		<g:layoutBody/>
 	</body>
 </html>
